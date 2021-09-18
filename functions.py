@@ -23,6 +23,11 @@ class document:
         index=open("template/index.html","a")
         index.write(f'\n</div>')
         index.close()
+    def startDivIn(classs="",ides=""):
+        index=open("template/index.html","a")
+        index.write(f'\n    <div class="{classs}" id="{ides}">')
+        index.close()
+    
     def createHeadingIn(size="",text="",ides="",classs=""):
         index=open("template/index.html","a")
         index.write(f'\n    <h{size} id="{ides}" class="{classs}">{text}</h{size}>')
@@ -45,6 +50,26 @@ class document:
     def createButton(text="",classs="",ides=""):
         index=open("template/index.html","a")
         index.write(f'\n<button class="{classs}" id="{ides}">')
+        index.close()
+    def createButtonIn(text="",classs="",ides=""):
+        index=open("template/index.html","a")
+        index.write(f'\n    <button class="{classs}" id="{ides}">')
+        index.close()
+    def addImageIn(name="",classs="",ides=""):
+        index=open("template/index.html","a")
+        index.write(f'\n    <img src="images/{name}" alt="unable to show" class="{classs}" id="{ides}">')
+        index.close()
+    def createParagraphIn(ides="",classs="",text="hello world"):
+        index=open("template/index.html","a")
+        index.write(f'\n    <p class="{classs}" id="{ides}">{text}</p>')
+        index.close()
+    def createInputIn(ides="",classs=""):
+        index=open("template/index.html","a")
+        index.write(f'\n    <input type="text" class="{classs} id="{ides}>')
+        index.close()
+    def createHeadingIn(size="",text="",ides="",classs=""):
+        index=open("template/index.html","a")
+        index.write(f'\n    <h{size} id="{ides}" class="{classs}">{text}</h{size}>')
         index.close()
     def mix(type=""):
         if(type=="style"):
