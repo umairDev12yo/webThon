@@ -55,6 +55,10 @@ class document:
         index=open("template/index.html","a")
         index.write(f'\n    <button class="{classs}" id="{ides}">')
         index.close()
+    def startListIn(classs="",ides=""):
+        index=open("template/index.html","a")
+        index.write(f'\n    <ul class="{classs}" id="{ides}">')
+        index.close()
     def addImageIn(name="",classs="",ides=""):
         index=open("template/index.html","a")
         index.write(f'\n    <img src="images/{name}" alt="unable to show" class="{classs}" id="{ides}">')
